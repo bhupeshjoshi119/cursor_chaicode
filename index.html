@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<header class="header">
+<header>
    <section class="nav-left">
     <img class="img1" src="https://cdn.brandfetch.io/ideKwS9dxx/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1741336988021" alt="this is imgage">
     <p class="text">cursor</p>
@@ -20,6 +20,10 @@
     <a href="#" class="anchor">Enterprise</a>
     <a href="#" class="anchor">Pricing</a>
     <a href="#" class="anchor">Resources</a>
+<button id="darkModeToggle" style="cursor:pointer;border:none;background:none;">
+  🌙
+</button>
+
   </nav>
 
   <section class="right">
@@ -247,6 +251,30 @@
       
   </section>
 </footer>
+
+
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Load saved mode
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    const isDark = body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  });
+</script>
+
+
 
 
 

@@ -6,6 +6,14 @@
     color: #ccc;
 }
 
+:root {
+  --bg-color: #ffffff;
+  --nav-bg: #ffffff;
+  --btn-bg: #f0f0f0;
+}
+
+
+
 .header{
   position: sticky;
   top:0;
@@ -400,5 +408,49 @@ content{
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
+
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --text-color: #ffffff;
+  --nav-bg: #0f0f0f;
+  --btn-bg: #1f1f1f;
+}
+
+.theme-toggle button {
+  background: var(--btn-bg);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* Default Light Mode */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+/* Navbar */
+body.dark-mode nav {
+  border-bottom: 1px solid #222;
+  color:#ccc;
+}
+
+/* Buttons / links */
+body.dark-mode a {
+  color: #ffffff;
+}
+
 
 
