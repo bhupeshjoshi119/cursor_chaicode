@@ -16,6 +16,8 @@ Click on the **code** and clone the repo and click on the live server ,this will
 - Simple image gallery and icon assets
 - Minimal HTML/CSS/JS — easy to read and modify
 - user reviews
+- new command
+The command git push --set-upstream origin dark-mode (which can also be written as git push -u origin dark-mode).
 
 <img width="1431" height="501" alt="Screenshot 2026-02-06 at 1 49 55 PM" src="https://github.com/user-attachments/assets/415c98ec-93e8-4ac4-826c-1e85a988f36e" />
 
